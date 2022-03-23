@@ -1,0 +1,52 @@
+{
+  "name": "bounty-client",
+  "private": true,
+  "scripts": {
+    "postinstall": "node ./scripts/setup_env.js",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "schema": "apollo service:download --endpoint=http://localhost:8080/graphql graphql-schema.json",
+    "generate-types": "apollo codegen:generate --localSchemaFile=graphql-schema.json --target=typescript --tagName=gql --globalTypesFile globalTypes.d.ts --outputFlat ./src/graphql/__generated__/"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.5.8",
+    "@chakra-ui/react": "^1.8.1",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "@metamask/detect-provider": "^1.2.0",
+    "@reduxjs/toolkit": "^1.7.1",
+    "@types/apollo-upload-client": "^17.0.0",
+    "@types/cookie": "^0.4.1",
+    "@types/uuid": "^8.3.4",
+    "abi-decoder": "^2.4.0",
+    "apollo-upload-client": "^17.0.0",
+    "axios": "^0.26.1",
+    "cookie": "^0.4.1",
+    "framer-motion": "^5",
+    "fuse.js": "^6.5.3",
+    "graphql": "^15.8.0",
+    "js-cookie": "^3.0.1",
+    "next": "12.0.9",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-feather": "^2.0.9",
+    "react-hook-form": "^7.28.0",
+    "react-redux": "^7.2.6",
+    "subscriptions-transport-ws": "^0.11.0",
+    "uuid": "^8.3.2",
+    "web3": "^1.7.1"
+  },
+  "resolutions": {
+    "**/graphql": "^15.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.13",
+    "@types/react": "17.0.38",
+    "apollo": "^2.33.9",
+    "eslint": "8.7.0",
+    "eslint-config-next": "12.0.9",
+    "typescript": "4.5.5"
+  }
+}
